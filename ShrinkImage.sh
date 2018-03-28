@@ -29,8 +29,8 @@ for file in $( find "$folder" -name '*.png' ); do
 done
 
 for file in $( find "$folder" -name '*.jpg' ); do
-	#compress JPG files
-	jpegoptim "$file" >/dev/null
+	#compress JPG files by stripping meta tags (including geotags). 
+	jpegoptim "$file" --strip-all >/dev/null
 done
 endSize=0
 for file in $( find "$folder" -name '*.jpg' ); do
