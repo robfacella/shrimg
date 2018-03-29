@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #Set IFS to new line.
 IFS=$'\n'
 
@@ -7,12 +6,9 @@ echo "Converts PNG to JPG & Compresses JPG"
 echo "In a directory and all of its subdirectories."
 echo ""
 echo "Enter a path(--h for more info): "
-
 #folder="/root/Pictures"
 read folder
-
 startSize=0
-
 for file in $( find "$folder" -name '*.jpg' -or -name '*.png' ); do
 	#Calculate starting Size of Files.
 	val=$( du "$file" | awk '{print $1}' ) 
@@ -27,7 +23,6 @@ for file in $( find "$folder" -name '*.png' ); do
 	#remove PNG file
 	rm "$file"
 done
-
 for file in $( find "$folder" -name '*.jpg' ); do
 	#compress JPG files by stripping meta tags (including geotags). 
 	jpegoptim "$file" --strip-all >/dev/null
@@ -43,7 +38,7 @@ echo "End size of File(s): $endSize k"
 saved=`expr $startSize - $endSize`
 prcnt=`expr $saved / $startSize`
 prcnt=`expr $prcnt \* 100`
-echo "Percent Saved: $prcnt \%  -  K Saved: $saved"
+echo "Saved: $saved k"
 
 #Return IFS to spaces.
 IFS=$' '
