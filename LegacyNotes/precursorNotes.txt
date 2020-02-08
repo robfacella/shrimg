@@ -1,0 +1,23 @@
+From 3/21/18
+Was planning on using two webservers to handle the files for me:
+png2jpg.com
+&&
+TinyPNG.com
+
+Upload files to the site(s) for processing
+Wait
+download result files
+
+upload X at a time
+upload all from a given folder location.
+
+extract the zipped files to a new location
+
+calculate the number of files to process to estimate times, show progress. (Verbose)
+
+Run through folders recusively
+
+verify that all files had been successfully transferred
+--retransfer missing/failed files
+
+
