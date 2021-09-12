@@ -1,0 +1,3 @@
+# git update-index --skip-worktree <path-name>
+
+git update-index --skip-worktree test.mp3
