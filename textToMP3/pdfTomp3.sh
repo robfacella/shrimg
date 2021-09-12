@@ -1,3 +1,4 @@
+# poppler-utils, ffmpeg, festival
 #from poppler-utils
 #pdf2txt input.pdf - instead of output file to send to stdout
 #pdftotext test.pdf -
