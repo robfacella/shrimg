@@ -4,7 +4,7 @@
 
 #text2wave test.txt -o test.wav
 # No output file set on text2wave pipes to stdout
-text2wave test.txt | ffmpeg -i pipe:0 -y -acodec mp3 test.mp3
+text2wave test.txt | ffmpeg -i pipe:0 -y -loglevel panic -acodec mp3 test.mp3
 # ffmpeg input flag of pipe:0 pulls stdout in (pipe:1 would be stdout)
 # set acodec to mp3 and an outputFile
 # it threw a warning but seems to have worked fine
