@@ -17,4 +17,6 @@ Notes:
 
 This script is intended for making images more bandwidth friendly and/or shrinking them for personal archiving.
 
-
+### 
+### initially made because i was tired of running to websites to modify these files
+### feel similar discomfort with pdfjoiner / Acrobat, why am i not using FOSS??
